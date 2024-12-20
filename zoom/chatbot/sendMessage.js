@@ -5,7 +5,7 @@ const { fetchAllData } = require('../api/zoomApiCalls');
 const { runPythonScript } = require('../../utils/pythonUtils');;
 
 async function sendChatMessage(chatbotToken, message, toJid, userJid) {
-    console.log(`Sending chat message to ${toJid}...`);
+    console.log(`Sending chat message to user ${toJid}...`);
     try {
         await axios.post('https://api.zoom.us/v2/im/chat/messages', {
             robot_jid: process.env.ZOOM_BOT_JID,
